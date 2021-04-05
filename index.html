@@ -1,103 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOG_IN</title>
-    <link rel="stylesheet" type="text/css" href="RESOURCES/CSS/style.css" />
-    <script src="RESOURCES/CSS/JS/script.js"></script>
-  </head>
-  <body>
-    <div class="main-page">
-      <div class="navbar">
-        <div>
-          <a href="#">SadAng Games</a>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bd43ee06c8.js" crossorigin="anonymous"></script>
+    <!-- style.css For Custom Styling -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+
+    <link rel="shortcut icon" href="images/icon.png" type="images/icon.png" />
+
+    <title>Sadang Games</title>
+    <script>
+        window.onload = function () {
+            var preloader = document.getElementById("preloader")
+            preloader.style.display = 'none';
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    
+   
+
+
+<script src="index.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- preloader starts  -->
+    <div id="preloader">
+        <div class="loader-div">
+            <div class="loader"></div>
+            <div class="heading">
+                Loading
+            </div>
         </div>
-        <nav>
-          <ul id="menuitems">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Upload</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Contact</a></li>
-            <li>
-              <button
-                class="loginbtn"
-                onclick="document.getElementById('login-form').style.display='block'"
-                style="width: auto"
-              >
-                Sign In
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    </div>
+    <!-- header starts -->
+    <header class="fix">
+        <video src="video/video.mp4" class="vid-bg" autoplay loop muted></video>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-col">
+            <a class="navbar-brand" href="#"><img src="images/icon.png" alt="Algo Phantoms" width="50px"
+                    height="50px"><span class="brand1"> <strong>SadAng</span>Games</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold nav-items" href="#">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold nav-items" href="#Games">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold nav-items" href="#footer">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                        class="nav-link font-weight-bold nav-items"
+                        onclick="document.getElementById('login-form').style.display='block'"
+                        style="width: auto"
+                        >
+                          Sign In
+                    </a>
+                      </li>
+                    
+                    </ul>
+                  </nav>
+                </div>
       <div id="login-form" class="login-page">
         <div class="form-box">
           <div class="button-box">
             <div id="btn"></div>
-            <button type="button" onclick="login()" class="toggle-btn">
-              Sign In
+            <button type="button" onclick="signIn()" class="toggle-btn">
+              <b>Sign In</b>
             </button>
-            <button type="button" onclick="register()" class="toggle-btn">
-              Sign Up
+            <button type="button" onclick="signUp()" class="toggle-btn">
+              <b>Sign Up</b> 
             </button>
           </div>
-          <form id="login" class="input-group-login">
+          <form id="signIn" class="input-group-signIn">
             <input
               type="email"
               class="input-field"
               placeholder="Email Id"
-              required
+              id="email"
             />
             <input
               type="password"
               class="input-field"
               placeholder="Enter Password"
-              required
+              id="password"
             />
-            <input type="checkbox" class="check-box" /><span
-              >Remember Password</span
-            >
-            <button type="submit" class="submit-btn">Sign In</button>
-          </form>
-          <form id="register" class="input-group-register">
-            <input
-              type="text"
-              class="input-field"
-              placeholder="First Name"
-              required
-            />
-            <input
-              type="text"
-              class="input-field"
-              placeholder="Last Name"
-              required
-            />
-            <input
-              type="email"
-              class="input-field"
-              placeholder="Email Id"
-              required
-            />
-            <input
-              type="password"
-              class="input-field"
-              placeholder="Enter password"
-              required
-            />
-            <input type="checkbox" class="check-box" required /><span>
-              I agree the terms and conditions
-            </span>
-            <button type="submit" class="submit-btn">Sign Up</button>
+            <input type="checkbox" class="check-box" />
+             <b> Remember Password </b>
+            
+            <button type="submit" onclick="signOut()" class="submit-btn">Sign Out</button>
           </form>
         </div>
       </div>
     </div>
     <script>
-      var x = document.getElementById("login");
-      var y = document.getElementById("register");
+      var x = document.getElementById("signIn");
+      var y = document.getElementById("rsignUp");
       var z = document.getElementById("btn");
       function register() {
         x.style.left = "-400px";
@@ -118,5 +149,246 @@
         }
       };
     </script>
-  </body>
+
+          <li class="nav-item dropdown">
+                        
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="banner-text text-center">
+            <p class="main-head">SadAng Games</p>
+            <p class="below-head"> A SELECTION OF THE <span>BEST</span> GAMES JUST FOR<span> YOU</span>...Built for <span>G</span>amers, <span>e</span>Sports fans, <span>G</span>ame fans & <span>T</span>rue gaming lovers</p>
+        </div>
+
+        <a class="smoothscroll" href="#about">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+        </div>
+        <a class="smoothscroll" href="#about">
+            <div class="scroll-down"></div>
+        </a>
+
+    </header>
+
+    <!-- header ends -->
+                        
+    <!--social media sidebar starts-->
+    <ul id="social-sidebar">
+        <li>
+            <a href='https://twitter.com/RiyaJha18592072' class="entypo-twitter"><span>Twitter</span></a>
+        </li>
+        <li>
+            <a href='https://www.facebook.com/profile.php?id=100058179684161' class="entypo-facebook"><span>Facebook</span></a>
+        </li>
+        <li>
+            <a href='https://www.instagram.com/riya_jha2305/' class="entypo-instagrem"><span>Instagram</span></a>
+        </li>
+        <li>
+            <a href='https://github.com/riyajha2305' class="entypo-github"><span>Github</span></a>
+        </li>
+    </ul>
+    <!--social media sidebae ends-->
+
+
+    <!-- games starts -->
+    <style type="text/css">
+        body{
+            background-image: url(https://i.pinimg.com/originals/f6/04/d2/f604d2fd28a6055f3bc7e3f4105d831e.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+            </style>
+    <section id="Games" class="Games">
+        <div class="container">
+            <h1 class="text-center"><span>Videos</span></h1>
+            <hr>
+            <hr>
+            <video width="550" controls>
+                
+                <source src="video/video1.mp4" type="video/mp4">
+                    
+            </video>
+            <video width="550" controls>
+
+                <source src="video/video2.mp4" type="video/mp4">
+            </video>
+            <video width="550" controls>
+
+                <source src="video/video3.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video4.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video5.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video6.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video7.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video8.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video9.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video10.mp4" type="video/mp4">
+            </video>
+
+            <video width="550" controls>
+
+                <source src="video/video11.mp4" type="video/mp4">
+            </video>
+            <video width="550" controls>
+
+                <source src="video/video12.mp4" type="video/mp4">
+                </video>
+
+        </div>
+    </section>
+    <!-- Games ends -->
+
+
+    <!-----footer starts---->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row subscribe-box py-5">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-12 offset-lg-1">
+                    <h2 class="text-white font-weight-bold py-2">Contact Us</h2>
+                    <br><br>
+                    <h5 class="text-white font-weight-bold py-2">
+                        We would <em>love</em> to hear from you! </h5>
+                    <h6 class="text-white font-weight-bold py-2">Please feel free to email via the <b><em>Contact Form</em></b>
+                        or just speak your mind. E-mail us with any questions or queries. We would be happy to answer your questions and value the suggestions from your side!
+                    </h6>
+                    <br><br>
+                    <h6 class="text-white font-weight-bold py-2">Nurture your child's optimism, logical, creative and analytical success!</h6>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+
+
+
+                    <form class="gform" action="https://script.google.com/macros/s/AKfycbytxRfvHhCH4uqDjpafxuAH_TUQqqfrVurMCe6xM3Ky3nAd8uHPMlDU1zaJKWZL3FnQ/exec" method="post" >
+                        <div class="form-elements">
+                            <font size="3"><span>Name:</span> </font><br>
+                            <input type="text" placeholder="Full Name" size="30" maxlength="100" name="name" required>
+                            <br><br>
+                            <font size="3"><span>Email Id:</span></font><br>
+                            <input type="text" placeholder="id@domain.com" size="30" maxlength="100" name="email" required>
+                            <br><br>
+                            <font size="3"><span>Message: </span></font><br>
+                            <textarea cols="32" rows="10" placeholder="Type your message..." name="message"></textarea><br><br>
+                            <button class="button-success pure-button button-xlarge">
+                                <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                        </div>
+                        <div class="thankyou_message" style="display:none;">
+                            <h3><em>Thanks</em> for contacting us!</h3>
+                            <h3>
+                                We will get back to you soon!</h3>
+                        </div>
+                    </form>
+                    <script data-cfasync="false" src="index.js"></script>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container mt-5 pt-lg-5">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-lg-3 col-6">
+                    <div class="">
+                        <img src="./images/icon.png" alt="" class="img-fluid mb-lg-4" width="100px" height="100px">
+                    </div>
+                    <p class="text-white">Address: CD-13/5, lane-2, JSPL-Township, Nisha Village, Angul, Odisha-759111</p>
+                    <p class="text-white">Contact: 8955792331, 7978986342</p>
+                    
+                    
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-6 offset-lg-1">
+                    <h5 class="font-weight-bold text-white mb-lg-4 pb-2 margin-top-mobile">Useful Links</h5>
+                    <ul>
+                        <a class="text-white mb-lg-3" href="index.html">Home</a><br>
+                        <a class="text-white mb-lg-3" href="#Games">Videos</a></br>
+                        <a class="text-white mb-lg-3" href="#footer">Contact</a>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <h5 class="font-weight-bold text-white mb-lg-4 pb-2">More Games</h5>
+                    <ul class="list-group">
+                        
+                     <a class="text-white mb-lg-3"href="https://www.arkadium.com/games/car-rush-racing-game/"target="_blank">Car Racing</a>
+                       <a class="text-white mb-lg-3"href="https://www.arkadium.com/free-online-games/solitaire/"target="_blank">Solitaire</a>
+                        <a class="text-white mb-lg-3"href="https://www.arkadium.com/free-online-games/puzzles/"target="_blank">Puzzles</a>
+                        <a class="text-white mb-lg-3"href="https://arkadium.com/free-online-games/crosswords/"target="_blank">Crosswords</a>
+                        <a class="text-white mb-lg-3"href="https://www.arkadium.com/free-online-games/brain-games/"target="_blank">Brain Games</a>
+                        <a class="text-white mb-lg-3"href="https://www.arkadium.com/free-online-games/word/"target="_blank">Word</a>
+                        <a class="text-white mb-lg-3"href="https://www.arkadium.com/free-online-games/sudoku/"target="_blank">Sudoku</a>
+                        <a class="text-white mb-lg-3"href="https://www.arkadium.com/free-online-games/board-games/"target="_blank">Board</a>
+                    </ul>
+                </div>
+
+
+                
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <h5 class="font-weight-bold text-white mb-lg-4 pb-2">Follow</h5>
+                    <li><a href="https://github.com/riyajha2305"><i class="fa fa-github p-2 text-white" aria-hidden="true" style="background: #181d1c; border-radius: 20%; font-size:48px;color:rgb(14, 37, 37)"></i>
+                    </a></li>
+                    <br>
+                    <li><a href="https://www.instagram.com/riya_jha2305/"><i class="fa fa-instagram p-2 text-white" aria-hidden="true" style="background: #7a0f57; border-radius: 20%; font-size:48px;color:red"></i>
+                    </a></li>
+                    <br>
+                    <li><a href="https://www.facebook.com/profile.php?id=100058179684161"><i class="fa fa-facebook p-2 text-white" aria-hidden="true" style="background: #1567b4; border-radius: 20%; font-size:45px;color:rgb(20, 100, 153)"></i>
+                    </a></li>
+
+                </div>
+            </div>
+            <hr style="background: white;" class="mt-5">
+            <div class="text-center text-white mt-lg-4 pt-lg-2 copyright-text">
+                2021 Copyright&copy; <span class="font-weight-bold">SadAng Games</span> . ALL RIGHTS RESERVED
+            </div>
+
+        </div>
+
+    </footer>
+    <!-----footer ends------>
+
+
+
+
+
+
+
+    <!-- Back to top button -->
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+    <script src="js/index.js"></script>
+
+
+
+    
+
+</body>
+
 </html>

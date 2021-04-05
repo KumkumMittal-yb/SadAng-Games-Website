@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a game</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    
+   
+
+
+<script src="index.js"></script>
+    
+
+
+
+
+</head>
+<body>
+    <div class="login-form">
+       
+        <div class="textbox">
+            <i class="fas fa-user" ></i>
+            email<input id="emailbox" type="text" placeholder="e-mail" name="" value="">
+        </div>
+    
+    <div class="textbox">
+        <i class="fas fa-lock" ></i>
+
+
+        Password<input id="pasbox" type="text" placeholder="Password" name="" value="">
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-user" ></i>
+       Username <input id="userbox" type="text" placeholder="Username" name="" value="">
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-user" ></i>
+       Link<input id="linkbox" type="text" placeholder="Link" name="" value="">
+    </div>
+
+    
+
+
+    <div class="wrapper">
+    <input class="button" id="insert" type="button" name="" value="INSERT">
+    <input class="button" id="select" type="button" name="" value="SELECT">
+    <input class="button" id="update" type="button" name="" value="UPDATE">
+    <input class="button" id="delete" type="button" name="" value="DELETE">
+    </div>
+
+
+
+
+    <script id="MainScript">
+
+
+    //------------------------------------------CONFIGURATION------------------------------------------------//
+    var firebaseConfig = {
+    apiKey: "AIzaSyB1AQUBPBbUbYBpqc5t6ah2-Nfw-wHXfh8",
+    authDomain: "algo-sadang.firebaseapp.com",
+    databaseURL: "https://algo-sadang-default-rtdb.firebaseio.com",
+    projectId: "algo-sadang",
+    storageBucket: "algo-sadang.appspot.com",
+    messagingSenderId: "275693898011",
+    appId: "1:275693898011:web:41e825f687c7c5f1f9ebbe"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+            //-----------------------------------READY DATA-----------------------------------//
+            var emailV, pasV, userV, linkV;
+
+            function Ready(){
+                emailV = document.getElementById('emailbox').value;
+                pasV = document.getElementById('pasbox').value;
+                userV = document.getElementById('userbox').value;
+                linkV = document.getElementById('linkbox').value;
+                
+            }
+
+
+            //-----------------------------------INSERTION PROCESS-----------------------------------//
+            document.getElementById('insert').onclick = function(){
+                Ready();
+                firebase.database().ref('student/'+pasV).set({
+                    email: emailV,
+                    Password: pasV,
+                    Username: userV,
+                    Link: linkV
+                
+
+
+
+                });
+            }
+            //-----------------------------------SELECTION PROCESS-----------------------------------//
+            document.getElementById("select").onclick = function(){
+                Ready();
+                firebase.database().ref('student/'+pasV).on('value',function(snapshot){
+                    document.getElementById('emailbox').value= snapshot.val().email;
+                    document.getElementById('userbox').value= snapshot.val().Username;
+                    document.getElementById('linkbox').value= snapshot.val().Link;
+                    
+                });
+            }
+            //-----------------------------------UPDATE PROCESS-----------------------------------//
+            document.getElementById('update').onclick = function(){
+                Ready();
+                firebase.database().ref('student/'+pasV).update({
+                    email: emailV,
+                    Username: userV,
+                    Link: linkV
+                
+
+
+
+                });
+            }
+            //-----------------------------------DELETION PROCESS-----------------------------------//
+            document.getElementById('delete').onclick = function(){
+                Ready();
+                firebase.database().ref('student/'+pasV).remove();
+            }
+</script>
+
+</body>
+</html>

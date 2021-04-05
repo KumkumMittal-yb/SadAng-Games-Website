@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/bd43ee06c8.js" crossorigin="anonymous"></script>
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+
+<!-- style.css For Custom Styling -->
+
+
+
+<link rel="stylesheet" href="http://youtube.locsal/assets/dcode.css">
+<link rel="shortcut icon" href="http://youtube.locsal/assets/favicon.ico">
+
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+
+<link rel="shortcut icon" href="images/icon.png" type="images/icon.png" />
+
+<title>SadAng Games</title>
+
+<style type="text/css">
+body{
+    
+    background-image: url(https://image.freepik.com/free-vector/purple-honeycomb-background_23-2148280442.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    </style>
+
+
+
+<script>
+    window.onload = function () {
+        var preloader = document.getElementById("preloader")
+        preloader.style.display = 'none';
+    }
+</script>
+
+<script src="index.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+
+
+
+
+
+
+
+</head>
+<body style = "background: url(https://cdn5.vectorstock.com/i/thumb-large/15/69/hexagonal-pattern-on-purple-magma-background-vector-32721569.jpg) background-size 100% 100%;">
+    
+
+       
+    
+<!-- preloader starts  -->
+
+<div id="preloader">
+    <div class="loader-div">
+        <div class="loader"></div>
+        <div class="heading">
+            Loading
+        </div>
+    </div>
+</div>
+
+
+     <!-- header starts -->
+     <header class="fix">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-col">
+            <a class="navbar-brand" href="#"><img src="images/icon.png" alt="Algo Phantoms" width="50px"
+                    height="50px"><span class="brand1"> <strong>SadAng</span>Games</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold nav-items" href="#Upload">Upload a <span>G</span>ame</a>
+                    </li>
+                    <li>
+                        <input type="text" name="" id="search" placeholder="what are you looking for...">
+                    </li>
+
+                   
+                    </ul>
+                  </nav>
+                </div>
+
+
+ <!----------------------trending game section-------------------------------------->
+ <div class="growmore">
+    <div class="game_class">
+    <h3 class="heading1_game_glass">TRENDING</h3>
+    <div class="border_bottom"></div>
+    <div class="main_container" id="main_container_new">
+        </div>
+    </div>
+</div>
+                
+                
+
+<!-------------------------codes of card------------------------->
+
+<div class="main_container" id="main_container_trend">
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg?v=0.2-2228cfbc" alt="IMAGE NOT FOUND">
+            <div>MOST POPULAR</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                ELEMENT BLOCKS
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.0   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/e/element-blocks/v160/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=8c70b6c7-5792-4c40-b891-496eef2fb5ed&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=891&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Element-Blocks/8c70b6c7-5792-4c40-b891-496eef2fb5ed">Review</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   
+
+
+
+                <!----------------------new game section-------------------------------------->
+                <div class="growmore">
+                    <div class="game_class">
+                    <h3 class="heading_game_glass">NEW</h3>
+                    <div class="border_bottom"></div>
+                    <div class="main_container" id="main_container_new">
+                        </div>
+                    </div>
+                </div>
+          
+                
+
+        
+    
+
+
+
+
+
+</body>
+</html>
