@@ -1,12 +1,11 @@
  // Your web app's Firebase configuration
  var firebaseConfig = {
-    apiKey: "AIzaSyB1AQUBPBbUbYBpqc5t6ah2-Nfw-wHXfh8",
-    authDomain: "algo-sadang.firebaseapp.com",
-    databaseURL: "https://algo-sadang-default-rtdb.firebaseio.com",
-    projectId: "algo-sadang",
-    storageBucket: "algo-sadang.appspot.com",
-    messagingSenderId: "275693898011",
-    appId: "1:275693898011:web:41e825f687c7c5f1f9ebbe"
+    apiKey: "AIzaSyBXemfvn76HQ7avtwZ0qDsrICuYM6vtngo",
+    authDomain: "sadang-8664c.firebaseapp.com",
+    projectId: "sadang-8664c",
+    storageBucket: "sadang-8664c.appspot.com",
+    messagingSenderId: "1059728025433",
+    appId: "1:1059728025433:web:1a381357684dbb6bc74e48"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
