@@ -1,14 +1,14 @@
- // Your web app's Firebase configuration
- var firebaseConfig = {
-    apiKey: "AIzaSyBXemfvn76HQ7avtwZ0qDsrICuYM6vtngo",
-    authDomain: "sadang-8664c.firebaseapp.com",
-    projectId: "sadang-8664c",
-    storageBucket: "sadang-8664c.appspot.com",
-    messagingSenderId: "1059728025433",
-    appId: "1:1059728025433:web:1a381357684dbb6bc74e48"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBU5k4vRh9Y008P2lGTC9e9WHLuI4sXoIg",
+        authDomain: "final-sadang.firebaseapp.com",
+        projectId: "final-sadang",
+        storageBucket: "final-sadang.appspot.com",
+        messagingSenderId: "859514664414",
+        appId: "1:859514664414:web:e42005e2265bbbba99194f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
 
   function signUp(){
@@ -49,7 +49,7 @@ alert("Signed Out");
         
         var email = user.email;
         alert("Active user " + email);
-        window.location.assign("welcome page.html");
+    
         
         //is signed in
        
@@ -214,7 +214,7 @@ function content_creator(cont,tag){
         for (let i in data){
             if (data[i]["Tag"]==tag && x<10){
                 let elements=`<div class="card unselectebal" id="card-${data[i]['Name']}"> 
-                <div class="immage_con unselectebal">
+                <div class="image_con unselectebal">
                 <img src="${data[i]['image_link']}" alt="IMAGE NOT FOUND">
                 <div>${data[i]['Tag']}</div>
                 </div>
