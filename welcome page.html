@@ -29,6 +29,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
 
+
+   
 <!-- style.css For Custom Styling -->
 
 
@@ -46,18 +48,9 @@
 
 <title>SadAng Games</title>
 
-<style type="text/css">
-body{
-    
-    background-image: url(https://image.freepik.com/free-vector/purple-honeycomb-background_23-2148280442.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-    </style>
-
-
-
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <script>
     window.onload = function () {
         var preloader = document.getElementById("preloader")
@@ -75,10 +68,10 @@ body{
 
 
 </head>
-<body style = "background: url(https://cdn5.vectorstock.com/i/thumb-large/15/69/hexagonal-pattern-on-purple-magma-background-vector-32721569.jpg) background-size 100% 100%;">
+<body>
     
 
-       
+    
     
 <!-- preloader starts  -->
 
@@ -94,7 +87,9 @@ body{
 
      <!-- header starts -->
      <header class="fix">
-        
+
+
+        <video src="video/video welcome page.mp4" class="vid-bg" autoplay loop muted></video>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-col">
             <a class="navbar-brand" href="#"><img src="images/icon.png" alt="Algo Phantoms" width="50px"
                     height="50px"><span class="brand1"> <strong>SadAng</span>Games</strong>
@@ -106,43 +101,60 @@ body{
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold nav-items" href="#Upload">Upload a <span>G</span>ame</a>
-                    </li>
-                    <li>
-                        <input type="text" name="" id="search" placeholder="what are you looking for...">
-                    </li>
-
                    
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold nav-items" href="#Race">RACE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold nav-items" href="#Cards">CARDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold nav-items" href="#Puzzle">PUZZLE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold nav-items" href="#Arcade">ARCADE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold nav-items" href="upload a game.html">UPLOAD</a>
+                    </li>
                     </ul>
-                  </nav>
-                </div>
+                    
 
+        
+       
+            </div>
+        </nav>
+    
+        
+ <!----------------------LATEST game section-------------------------------------->
 
- <!----------------------trending game section-------------------------------------->
+ 
+ 
  <div class="growmore">
     <div class="game_class">
-    <h3 class="heading1_game_glass">TRENDING</h3>
+    <h3 class="heading1_game_glass"></h3>   
+    <hr>  
+    </div>
     <div class="border_bottom"></div>
     <div class="main_container" id="main_container_new">
         </div>
     </div>
 </div>
                 
-                
+        
 
-<!-------------------------codes of card------------------------->
+   
+<!-------------------------codes of card(LATEST)------------------------->
 
-<div class="main_container" id="main_container_trend">
+<div class="main_container owl-carousel" id="main_container_trend">
     <div class="card tilt" id="card-1">
         <div class="image_con">
             <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg?v=0.2-2228cfbc" alt="IMAGE NOT FOUND">
-            <div>MOST POPULAR</div>
+            <div>LATEST</div>
         </div>
         <div vlass="game_con">
             <div class="game_name">
-                ELEMENT BLOCKS
+                ELEMENT - BLOCKS
                 <div class="admin_edit" id="admin_edit">
                     <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
                     id="only_admin_icon_edit_2">
@@ -160,29 +172,740 @@ body{
             </div>
         </div>
     </div>
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/DiamondRushTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                DIAMOND - RUSH
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.3   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/d/diamond-rush/v140/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=395b0746-6d0e-4ec8-b11c-18cab8009214&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=604&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Diamond-Rush/395b0746-6d0e-4ec8-b11c-18cab8009214">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/CandyBubble_Teaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                CANDY - BUBBLE
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.2   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/c/candy-bubble/v780/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=c5e12171-a07f-4335-bd2a-8b7e4c3aa8ad&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=605&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Candy-Bubble/c5e12171-a07f-4335-bd2a-8b7e4c3aa8ad">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/GreedyRabbitTeaser.jpg?v=0.2-7a61379d" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                GREEDY RABBIT
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.4   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/g/greedy-rabbit/v080/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=b66a91a6-5814-4a1a-acde-45366df8934a&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=582&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Greedy-Rabbit/b66a91a6-5814-4a1a-acde-45366df8934a">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/SpeedManiacTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                SPEED-MANIAC
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.4   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/s/speed-maniac/v020/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=ab87e052-64d3-44b9-b781-6ce8898be5a6&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=631&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Speed-Maniac/ab87e052-64d3-44b9-b781-6ce8898be5a6">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/MonkeyBounceTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                MONKEY-BOUNCE
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">5.0  rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/m/monkey-bounce/v040/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=cf951a62-6031-4b49-8870-60cfe8569a9f&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=628&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Monkey-Bounce/cf951a62-6031-4b49-8870-60cfe8569a9f">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/SweetsMonsterTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                SWEETS-MONSTER
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">5.0  rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/s/sweets-monster/v030/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=4984c2a0-8b7f-4d6d-a988-532f77e9555e&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=745&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Sweets-Monster/4984c2a0-8b7f-4d6d-a988-532f77e9555e">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ThugRacerTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                THUG RACER
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.7   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/t/thug-racer/v330/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=c3a9bc6a-f9cf-4bcd-bd12-b1c5fcb4dc5d&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=743&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Thug-Racer/c3a9bc6a-f9cf-4bcd-bd12-b1c5fcb4dc5d">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/StackSmashTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                STACK SMASH
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.6   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/s/stack-smash/v030/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=3ad5d684-ab8b-4730-a209-8a614030c39a&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=745&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Stack-Smash/3ad5d684-ab8b-4730-a209-8a614030c39a">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/PerfectPiano_Teaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                PERFECT PIANO
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.4   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/p/perfect-piano/v090/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=24f835e0-d21a-47e1-a721-9f68beed83f3&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=747&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Perfect-Piano/24f835e0-d21a-47e1-a721-9f68beed83f3">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/TowerRushTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                TOWER RUSH
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.2   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/t/tower-rush/v060/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=8ecec4aa-5fa8-4b11-9b9a-67bf7806faa2&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=747&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Tower-Rush/8ecec4aa-5fa8-4b11-9b9a-67bf7806faa2">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card tilt" id="card-1">
+        <div class="image_con">
+            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/BasketballTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+            <div>LATEST</div>
+        </div>
+        <div vlass="game_con">
+            <div class="game_name">
+                BASKETBALL
+                <div class="admin_edit" id="admin_edit">
+                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                    id="only_admin_icon_edit_2">
+                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                    id="only_admin_icon_del_2">
+                </div>
+            </div>
+            <div class="game_info">
+                <div class="rate">4.1   rating</div>
+                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+            </div>
+            <div class="imp_btn">
+                <a href="https://games.cdn.famobi.com/html5games/b/basketball/v070/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=42fdec95-13a2-4af7-b0f1-776a7861f0bd&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=747&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                <a href="https://html5games.com/Game/Basketball/42fdec95-13a2-4af7-b0f1-776a7861f0bd">Review</a>
+            </div>
+        </div>
+    </div>
+
+
+    
 </div>
 
 
+     </header>
+
    
+<script>
+    $(".main_container").owlCarousel({
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:1000, //1000ms=1s;
+        autoplayHoverPause:true,
+    })
+</script>
 
 
 
-                <!----------------------new game section-------------------------------------->
+                <!----------------------RACE game section-------------------------------------->
+                
+                <section id="Race" class="Games" >
+                    
                 <div class="growmore">
                     <div class="game_class">
-                    <h3 class="heading_game_glass">NEW</h3>
+                    <h3 class="heading_game_glass">RACE</h3>
+                    <hr>
                     <div class="border_bottom"></div>
                     <div class="main_container" id="main_container_new">
                         </div>
                     </div>
                 </div>
           
-                
+                <!-------------------------codes of cards(RACE)--------------------------->
+
+                <div class="main_container" id="main_container_trend">
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/MotoFuryTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>RACE</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                                MOTO - FURY
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.0   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/m/moto-fury/v060/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=7c0efd17-b355-4e57-935e-7661b109a98c&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=767&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Moto-Fury/7c0efd17-b355-4e57-935e-7661b109a98c">Review</a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 
-                       
+
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/DontCrashTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>RACE</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                               DON'T CRASH
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.0   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/d/dont-crash/v030/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=9320bd31-c1fa-4dda-9a89-6e3946399a84&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=770&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Dont-Crash/9320bd31-c1fa-4dda-9a89-6e3946399a84">Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/TruckTrialsTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>RACE</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                               TRUCK TRIALS
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.0   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/t/truck-trials/v500/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=e56b8aaa-86e9-4d9f-9ea1-3822a3021716&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=771&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Truck-Trials/e56b8aaa-86e9-4d9f-9ea1-3822a3021716">Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <!-----------------------------------CARDS game section------------------------------------------>
+                <section id="Cards" class="Games">
+                     
+                <div class="growmore">
+                    <div class="game_class">
+                    <h3 class="heading_game_glass">CARDS</h3>
+                    <hr>
+                    <div class="border_bottom"></div>
+                    <div class="main_container" id="main_container_new">
+                        </div>
+                    </div>
+                </div>
+                    
+                </section>
+
+                 <!-------------------------codes of cards(CARDS)--------------------------->
+
+                 <div class="main_container" id="main_container_trend">
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/3dSolitaireTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>CARDS</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                                3D SOLITAIRE
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.2   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/0/3d-solitaire/v200/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=d10079e7-919b-4d55-98b2-6e4c7e3eb68a&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=798&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/3D-Solitaire/d10079e7-919b-4d55-98b2-6e4c7e3eb68a">Review</a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 
+
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/DuoCardsTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>CARDS</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                               DUO CARDS
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">3.8  rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/d/duo-cards/v230/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=a049631f-a44c-4486-8042-0a1170b154d5&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=799&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Duo-Cards/a049631f-a44c-4486-8042-0a1170b154d5">Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/FairyCardsTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>CARDS</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                               FAIRY CARDS
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.6   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/f/fairy-cards/v020/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=18f4fd6f-a216-46ea-a464-b86516f7039e&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=800&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Fairy-Cards/18f4fd6f-a216-46ea-a464-b86516f7039e">Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+
+
+                 <!-----------------------------------PUZZLE game section------------------------------------------>
+                 <section id="Puzzle" class="Games">
+                    
+                <div class="growmore">
+                    <div class="game_class">
+                    <h3 class="heading_game_glass">PUZZLE</h3>
+                    <hr>
+                    <div class="border_bottom"></div>
+                    <div class="main_container" id="main_container_new">
+                        </div>
+                    </div>
+                </div>
+                    
+                
+
+                 <!-------------------------codes of cards(PUZZLE)--------------------------->
+
+                 <div class="main_container" id="main_container_trend">
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/OnetWorldTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>PUZZLE</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                                ONET - WORLD
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.9   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/o/onet-world/v240/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=a287bd43-371a-458b-b31e-a7c886e8301a&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=805&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Onet-World/a287bd43-371a-458b-b31e-a7c886e8301a">Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                
+
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/TapMyWaterTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>PUZZLE</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                               TAP MY WATER
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.0  rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/t/tap-my-water/v040/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=80e0013c-a40f-4191-93dc-30d3e494ee8f&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=805&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Tap-My-Water/80e0013c-a40f-4191-93dc-30d3e494ee8f">Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card tilt" id="card-1">
+                        <div class="image_con">
+                            <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/WordDetectorTeaserB.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                            <div>PUZZLE</div>
+                        </div>
+                        <div vlass="game_con">
+                            <div class="game_name">
+                               WORD DETECTOR
+                                <div class="admin_edit" id="admin_edit">
+                                    <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                    id="only_admin_icon_edit_2">
+                                    <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                    id="only_admin_icon_del_2">
+                                </div>
+                            </div>
+                            <div class="game_info">
+                                <div class="rate">4.8   rating</div>
+                                <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                            </div>
+                            <div class="imp_btn">
+                                <a href="https://games.cdn.famobi.com/html5games/w/word-detector/v390/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=fa994966-a4d2-4aa5-98b1-5b9f138b1edd&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=808&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                <a href="https://html5games.com/Game/Word-Detector/fa994966-a4d2-4aa5-98b1-5b9f138b1edd">Review</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+               
+                 <!-----------------------------------ARCADE game section------------------------------------------>
+                 <section id="Arcade" class="Games">
+                    
+                    <div class="growmore">
+                        <div class="game_class">
+                        <h3 class="heading_game_glass">ARCADE</h3>
+                        <hr>
+                        <div class="border_bottom"></div>
+                        <div class="main_container" id="main_container_new">
+                            </div>
+                        </div>
+                    </div>
+                        
+                    
+    
+                     <!-------------------------codes of cards(PUZZLE)--------------------------->
+    
+                     <div class="main_container" id="main_container_trend">
+                        <div class="card tilt" id="card-1">
+                            <div class="image_con">
+                                <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/SliceRushTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                                <div>ARCADE</div>
+                            </div>
+                            <div vlass="game_con">
+                                <div class="game_name">
+                                    SLICE - RUSH
+                                    <div class="admin_edit" id="admin_edit">
+                                        <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                        id="only_admin_icon_edit_2">
+                                        <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                        id="only_admin_icon_del_2">
+                                    </div>
+                                </div>
+                                <div class="game_info">
+                                    <div class="rate">5.0   rating</div>
+                                    <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                                </div>
+                                <div class="imp_btn">
+                                    <a href="https://games.cdn.famobi.com/html5games/s/slice-rush/v040/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=346e8aee-6848-4974-a0cd-d19525a18c41&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=811&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                    <a href="https://html5games.com/Game/Slice-Rush/346e8aee-6848-4974-a0cd-d19525a18c41">Review</a>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    
+    
+                        <div class="card tilt" id="card-1">
+                            <div class="image_con">
+                                <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/KumbaKoolTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                                <div>ARCADE</div>
+                            </div>
+                            <div vlass="game_con">
+                                <div class="game_name">
+                                   KUMBA - KOOL
+                                    <div class="admin_edit" id="admin_edit">
+                                        <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                        id="only_admin_icon_edit_2">
+                                        <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                        id="only_admin_icon_del_2">
+                                    </div>
+                                </div>
+                                <div class="game_info">
+                                    <div class="rate">4.2  rating</div>
+                                    <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                                </div>
+                                <div class="imp_btn">
+                                    <a href="https://games.cdn.famobi.com/html5games/k/kumba-kool/v100/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=16afbe05-a248-4978-b982-57cd59f5d615&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=809&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                    <a href="https://html5games.com/Game/Kumba-Kool/16afbe05-a248-4978-b982-57cd59f5d615">Review</a>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div class="card tilt" id="card-1">
+                            <div class="image_con">
+                                <img src="https://img.cdn.famobi.com/portal/html5games/images/tmp/PilotHeroesTeaser.jpg?v=0.2-26ee73f9" alt="IMAGE NOT FOUND">
+                                <div>ARCADE</div>
+                            </div>
+                            <div vlass="game_con">
+                                <div class="game_name">
+                                   PILOT HEROES
+                                    <div class="admin_edit" id="admin_edit">
+                                        <img src="" alt="" class="image_edit 02" onclick="edit(this.id)"
+                                        id="only_admin_icon_edit_2">
+                                        <img src="" alt="" class="image_edit 02" onclick="delet(this.id)"
+                                        id="only_admin_icon_del_2">
+                                    </div>
+                                </div>
+                                <div class="game_info">
+                                    <div class="rate">4.3   rating</div>
+                                    <div class="views" style="color: #9d9d9d";><span style="color: #e7e4f1; font-weight: 600;font-size: 20px;">0 Views </span></div>
+                                </div>
+                                <div class="imp_btn">
+                                    <a href="https://games.cdn.famobi.com/html5games/p/pilot-heroes/v130/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=1c400eea-0f01-490b-b64e-7a9966ffb6a8&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=813&original_ref=https%3A%2F%2Fhtml5games.com%2F">Play Now</a>
+                                    <a href="https://html5games.com/Game/Pilot-Heroes/1c400eea-0f01-490b-b64e-7a9966ffb6a8">Review</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+                   
               
                     
 </body>

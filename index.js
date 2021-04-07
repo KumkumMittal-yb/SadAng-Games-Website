@@ -18,7 +18,7 @@
 const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
 promise.catch(e => alert(e.message));
 
-alert("Signed Up");
+alert("You are now Signed Up! Enjoy your journey with SadAng Games.");
 
   }
 
@@ -38,7 +38,7 @@ promise.catch(e => alert(e.message));
   function signOut(){
 
 auth.signOut();
-alert("Signed Out");
+alert("Signed Out! Thank you for your visit.");
 
   }
 
@@ -48,7 +48,7 @@ alert("Signed Out");
       if(user){
         
         var email = user.email;
-        alert("Active user " + email);
+        alert("Hey there, " + email);
         window.location.assign("welcome page.html");
     
         
@@ -63,38 +63,6 @@ alert("Signed Out");
       
 }
       });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Back to top button
-
-const backToTopButton = document.querySelector("#back-to-top-btn");
-window.addEventListener("scroll", () => {
-    if(window.pageYOffset > 500) { //make the button visible
-        backToTopButton.style.display = "block";
-    }
-    else { // hide the button
-        backToTopButton.style.display = "none";
-    }
-});
-
-backToTopButton.addEventListener("click", () => {
-    window.scrollTo(0,0);
-});
-
-
 
 
 //--------contact us----------//
@@ -178,6 +146,7 @@ backToTopButton.addEventListener("click", () => {
               var thankYouMessage = form.querySelector(".thankyou_message");
               if (thankYouMessage) {
                   thankYouMessage.style.display = "block";
+                  
               }
           }
       };

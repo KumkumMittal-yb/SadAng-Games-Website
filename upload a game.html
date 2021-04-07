@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload a game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
-        
 
-
-    <script src="index.js"></script>
+    
 
 
 
@@ -23,27 +21,32 @@
 </head>
 <body>
     <div class="login-form">
+
+        <h3>upload your <span>G</span>ame</h3>
+        <hr>
        
         <div class="textbox">
-            <i class="fas fa-user" ></i>
+            
             email<input id="emailbox" type="text" placeholder="e-mail" name="" value="">
+            <i class="fas fa-envelope"></i>
         </div>
     
     <div class="textbox">
-        <i class="fas fa-lock" ></i>
-
-
+    
         Password<input id="pasbox" type="text" placeholder="Password" name="" value="">
+        <i class="fas fa-key"></i>
     </div>
 
     <div class="textbox">
-        <i class="fas fa-user" ></i>
+        
        Username <input id="userbox" type="text" placeholder="Username" name="" value="">
+       <i class="fas fa-male"></i>
     </div>
 
     <div class="textbox">
-        <i class="fas fa-user" ></i>
+        
        Link<input id="linkbox" type="text" placeholder="Link" name="" value="">
+       <i class="far fa-link"></i>
     </div>
 
     
@@ -63,14 +66,13 @@
 
 
     //------------------------------------------CONFIGURATION------------------------------------------------//
-     // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBU5k4vRh9Y008P2lGTC9e9WHLuI4sXoIg",
-    authDomain: "final-sadang.firebaseapp.com",
-    projectId: "final-sadang",
-    storageBucket: "final-sadang.appspot.com",
-    messagingSenderId: "859514664414",
-    appId: "1:859514664414:web:e42005e2265bbbba99194f"
+    var firebaseConfig = {
+    apiKey: "AIzaSyCXYOLDne7zQC9EmieZyJ_gGOQ8XyYG2Ow",
+    authDomain: "upload-game-5fc37.firebaseapp.com",
+    projectId: "upload-game-5fc37",
+    storageBucket: "upload-game-5fc37.appspot.com",
+    messagingSenderId: "156235652301",
+    appId: "1:156235652301:web:a416832b79386ee85a5d84"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -95,11 +97,14 @@
                     Password: pasV,
                     Username: userV,
                     Link: linkV
+                    
                 
 
 
 
                 });
+                alert("Your data is Inserted");
+                
             }
             //-----------------------------------SELECTION PROCESS-----------------------------------//
             document.getElementById("select").onclick = function(){
@@ -110,6 +115,7 @@
                     document.getElementById('linkbox').value= snapshot.val().Link;
                     
                 });
+                alert("Your data is selected");
             }
             //-----------------------------------UPDATE PROCESS-----------------------------------//
             document.getElementById('update').onclick = function(){
@@ -123,17 +129,18 @@
 
 
                 });
+                alert("Your data is updated");
+                
             }
             //-----------------------------------DELETION PROCESS-----------------------------------//
             document.getElementById('delete').onclick = function(){
                 Ready();
                 firebase.database().ref('student/'+pasV).remove();
+                alert("Your data is deleted");
             }
 </script>
 
-
-   
-    
-    
 </body>
 </html>
+
+
