@@ -18,7 +18,7 @@
 const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
 promise.catch(e => alert(e.message));
 
-alert("You are now Signed Up! Enjoy your journey with SadAng Games.");
+alert("You are now Signed Up! Click on Sign-in to continue.");
 
   }
 
@@ -50,6 +50,7 @@ alert("Signed Out! Thank you for your visit.");
         var email = user.email;
         alert("Hey there, " + email);
         window.location.assign("welcome page.html");
+        
     
         
         //is signed in
